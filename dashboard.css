@@ -1,0 +1,334 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    background-color: #f9f9f9;
+}
+.wrapper {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    background: #1F2937;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+.container {
+    flex: 1;
+    width: 1180px;
+    height: 600px;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: none;
+    position: absolute;
+    top: 170px;
+    right: 0;
+}
+.sub-container{
+    width: 100%;
+}
+
+.sidebar h2 {
+    text-align: center;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    border-bottom: 1px solid #2c3e50;
+}
+
+.sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+.sidebar button {
+    background-color: #1F2937;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* Main content */
+.main-content {
+    flex: 1;
+    padding: 20px;
+    background: none;
+    position: absolute;
+    top: 0;
+    left: 290px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 24px;
+}
+
+.button {
+    padding: 10px 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+/* Table */
+table {
+    width: 1000px;
+    border-collapse: collapse;
+    margin-top: 0;
+    background: white;
+    
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Modal input*/
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 300px;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+}
+.modal-footer .cancel-btn{
+    background-color: red;
+    color: #f9f9f9;
+  }
+  .modal-footer .save-btn{
+    background-color: #0056b3;
+    color: #f9f9f9;
+  }
+
+/* modal xóa sửa */
+.confirm {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  .confirm-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+  }
+  .confirm-footer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .confirm-footer .cancel{
+    background-color: red;
+    color: #f9f9f9;
+  }
+  .confirm-footer .confirm-btn{
+    background-color: #0056b3;
+    color: #f9f9f9;
+  }
+
+.cancel-btn, .save-btn {
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel-btn {
+    background: gray;
+    color: white;
+}
+
+.save-btn {
+    background: blue;
+    color: white;
+}
+
+.error-msg {
+    color: red;
+    font-size: 12px;
+}
+.btn-add{
+    color: #f9f9f9;
+    background-color: #0056b3;
+    margin: 10px;
+    border-radius: 5px;
+    border-color: #0056b3;
+}
+/* Modal bộ lọc */
+#confirmModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+#confirmModal .confirm-modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 350px;
+    text-align: center;
+}
+.filter-section {
+    width: 1150px;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.filter-section label {
+    font-weight: bold;
+    margin-right: 4px;
+}
+
+.filter-section select,
+.filter-section input[type="date"] {
+    padding: 6px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+/*Bộ đếm*/
+.stats {
+    display: flex;
+    gap: 20px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+    width: 1180px;
+}
+
+.stat-card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 16px;
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.stat-card p {
+    margin: 0 0 8px;
+    font-weight: bold;
+}
+
+.stat-number {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.stat-number.blue {
+    color: #007bff;
+}
+
+.stat-number.green {
+    color: #28a745;
+}
+
+.stat-number.purple {
+    color: #6f42c1;
+}
+table{
+    width: 1170px;
+}
+
+.chart-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 800px; /* Hoặc bao nhiêu bạn muốn */
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  canvas {
+    width: 300px !important;
+    height: 300px !important;
+  }
+/* chức năng ngày 7 */
+#serviceList {
+    list-style: none;
+    padding-left: 0;
+  }
+  #serviceList li {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+  }
+  #serviceList button {
+    margin-left: 10px;
+  }
+  

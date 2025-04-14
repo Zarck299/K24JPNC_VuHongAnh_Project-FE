@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <form id="registerForm" action="#">
+        <h3>Đăng kí tài khoản</h3>
+        <div class="register-container">
+            <div>
+                <label for="reg-name">Họ và tên</label>
+                <br>
+                <input type="text" id="reg-name">
+                <span id="errorName" style="color: red; display: none;"></span>
+            </div>
+            <div>
+                <label for="">Email</label>
+                <br>
+                <input type="email" id="reg-email">
+                <span id="errorEmail" style="color: red; display: none;"></span>
+            </div>
+            <div>
+                <label for="">Mật khẩu</label>
+                <br>
+                <input type="password" id="reg-password">
+                <span id="errorPass" style="color: red; display: none;"></span>
+            </div>
+            <div>
+                <label for="">Xác nhận mật khẩu</label>
+                <br>
+                <input type="password" id="checkpass">
+                <span id="errorCheck" style="color: red; display: none;"></span>
+            </div>
+            <div>
+                <button id="registerButton">Đăng kí</button>
+            </div>
+            <div>
+                <p>Đã có tài khoản? <a href="./login.html">Đăng nhập</a></p>
+            </div>
+        </div>
+    </form>
+    <script src="/asset/js/regit.js"></script>
+</body>
+</html>

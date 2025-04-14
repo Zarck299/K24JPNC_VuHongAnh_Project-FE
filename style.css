@@ -1,0 +1,97 @@
+/* Đăng nhập */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+.login-container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+h2 {
+    margin-bottom: 20px;
+}
+label {
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+input {
+    width: 200px;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 15px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+.register-text {
+    margin-top: 10px;
+    font-size: 14px;
+}
+.register-text a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+.register-text a:hover {
+    text-decoration: underline;
+}
+
+
+  /* Responsive - PC */
+  @media screen and (min-width: 1025px) {
+    .login-box {
+      width: 400px;
+      padding: 40px;
+    }
+  }
+  
+  /* Responsive - Tablet: 834x1194 */
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .login-container {
+      width: 350px;
+      padding: 30px;
+    }
+  }
+  
+  /* Responsive - Mobile: 375x667 */
+  @media screen and (max-width: 767px) {
+    .login-container {
+      width: 90%;
+      padding: 25px;
+    }
+  
+    .login-container h2 {
+      font-size: 20px;
+    }
+  
+    .login-container .register-link {
+      font-size: 13px;
+    }
+  }
+  

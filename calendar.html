@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../css/calendar.css">
+  <title>Quản lý lịch tập</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="sidebar">
+            <h2>Admin Dashboard</h2>
+            <ul>
+                <li><button id="calendarBtn">Quản lí lịch</button></li>
+                <li><button id="customBtn">Quản lí dịch vụ</button></li>
+                <li><button id="homepageBtn">Trang chủ</button></li>
+                <li><button id="caculateBtn">Thống kê Lịch</button></li>
+                <li><button style="color: red;" id="logoutBtn">Đăng xuất</button></li>
+            </ul>
+        </div>
+      <div class="container">
+        <h2>Quản lý lịch tập</h2>
+        <button class="btn-add">Thêm lịch</button>
+        <table>
+          <thead>
+            <tr>
+              <th>Lớp học</th>
+              <th>Ngày tập</th>
+              <th>Khung giờ</th>
+              <th>Họ tên</th>
+              <th>Email</th>
+              <th>Thao tác</th>
+            </tr>
+          </thead>
+          <tbody id="scheduleTableBody"></tbody>
+        </table>
+      </div>
+    </div>
+  <div class="modal" id="scheduleModal">
+    <div class="modal-content">
+      <h3>Thêm / Sửa lịch tập</h3>
+      <label for="reg-class">Lớp học:</label>
+      <input type="text" id="reg-class">
+      <span class="error-msg" id="errorClass"></span>
+
+      <label for="reg-date">Ngày tập:</label>
+      <input type="date" id="reg-date">
+      <span class="error-msg" id="errorDate"></span>
+
+      <label for="reg-time">Khung giờ:</label>
+      <input type="time" id="reg-time">
+      <span class="error-msg" id="errorTime"></span>
+
+      <label for="reg-name">Họ tên:</label>
+      <input type="text" id="reg-name">
+      <span class="error-msg" id="errorName"></span>
+
+      <label for="reg-email">Email:</label>
+      <input type="email" id="reg-email">
+      <span class="error-msg" id="errorEmail"></span>
+
+      <div class="modal-footer">
+        <button class="cancel-btn">Hủy</button>
+        <button class="save-btn">Lưu</button>
+      </div>
+    </div>
+  </div>
+  <div class="confirm" id="confirmModal">
+    <div class="confirm-content">
+      <p id="confirmMessage">Bạn có chắc không?</p>
+      <div class="confirm-footer">
+        <button class="cancel" id="confirmCancel">Hủy</button>
+        <button class="confirm-btn" id="confirmOK">Xác nhận</button>
+      </div>
+    </div>
+  </div>
+  <div class="filter-section" style="margin-bottom: 10px; display: flex; gap: 20px;">
+    <div>
+      <label for="classFilter">Lọc theo lớp học: </label>
+      <input type="text" id="classFilter" placeholder="Nhập tên lớp..." />
+    </div>
+    <div>
+      <label for="emailFilter">Lọc theo email: </label>
+      <input type="text" id="emailFilter" placeholder="Nhập email..." />
+    </div>
+  </div>  
+  <script src="../../js/calendar.js"></script>
+</body>
+</html>
