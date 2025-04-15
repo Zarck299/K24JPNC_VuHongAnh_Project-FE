@@ -251,7 +251,7 @@ th {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-/* Responsive cho màn hình nhỏ hơn 1024px (Tablet) */
+/*Cắt giao diện*/
 @media (max-width: 1024px) {
     .sidebar {
       width: 200px;
@@ -270,8 +270,7 @@ th {
       width: 90%;
     }
   }
-  
-  /* Responsive cho màn hình nhỏ hơn 768px (Mobile) */
+
   @media (max-width: 768px) {
     body {
       flex-direction: column;
