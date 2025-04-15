@@ -62,8 +62,6 @@ button:hover {
     text-decoration: underline;
 }
 
-
-  /* Responsive - PC */
   @media screen and (min-width: 1025px) {
     .login-box {
       width: 400px;
@@ -71,15 +69,12 @@ button:hover {
     }
   }
   
-  /* Responsive - Tablet: 834x1194 */
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .login-container {
       width: 350px;
       padding: 30px;
     }
   }
-  
-  /* Responsive - Mobile: 375x667 */
   @media screen and (max-width: 767px) {
     .login-container {
       width: 90%;
