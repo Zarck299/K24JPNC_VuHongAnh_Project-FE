@@ -154,7 +154,6 @@
     font-size: 14px;
     color: #ccc;
 }
-/* Desktop - >= 1025px (1440x900) */
 @media screen and (min-width: 1025px) {
     .navbar {
       padding: 24px 60px;
@@ -175,8 +174,7 @@
       text-align: left;
     }
   }
-  
-  /* Tablet - từ 768px đến 1024px (834x1194) */
+
   @media screen and (min-width: 768px) and (max-width: 1024px) {
     .navbar {
       padding: 20px 40px;
@@ -209,8 +207,7 @@
       align-items: center;
     }
   }
-  
-  /* Mobile - tối đa 767px (375x667) */
+
   @media screen and (max-width: 767px) {
     .navbar {
       padding: 15px 20px;
